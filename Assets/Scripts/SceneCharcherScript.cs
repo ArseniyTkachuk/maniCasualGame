@@ -8,6 +8,11 @@ public class SceneCharcherScript : MonoBehaviour
         Time.timeScale = 1.0f;
     }
 
+    public void ResetGame()
+    {
+        PlayerPrefs.DeleteAll();
+    }
+
     public void CharchScene(string sceneName)
     {
         SceneManager.LoadScene(sceneName);
