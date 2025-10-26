@@ -13,8 +13,10 @@ public class BgSound : MonoBehaviour
 
     private void Start()
     {
-        if (slider != null) 
-        slider.value = PlayerPrefs.GetFloat("volume");
+        if (!PlayerPrefs.HasKey("volume"))
+            PlayerPrefs.SetFloat("volume", 1f);
+        if (slider != null)
+            slider.value = PlayerPrefs.GetFloat("volume");
     }
 
     private void Update()
